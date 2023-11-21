@@ -1,5 +1,5 @@
 @import url(./Root.css);
-@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Cairo:wght@400;500;600;700;800;900;1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Cairo:wght@400;500;600;700;800;900;1000&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
   box-sizing: border-box;
   font-family: var(--ar-font);
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 5px;
 }
 ::-webkit-scrollbar-track {
@@ -17,33 +17,39 @@
   background: var(--prim-color);
   border-radius: 10px;
 }
-body{
+body {
   overflow-x: hidden;
   background-color: var(--bg-color);
   font-family: var(--ar-font);
 }
 
-
-.section_container{
+.section_container {
   width: 90%;
   margin: 0 auto;
-  background-color: #FDFDFF;
+  background-color: #fdfdff;
   padding: 35px 15px;
   border-radius: 35px;
 }
-.section_title{
+.section_container_prime {
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--prim-color);
+  padding: 35px;
+  border-radius: 35px;
+}
+.section_title {
   text-align: center;
   color: var(--white);
   margin: 75px 0 32px 0;
   font-size: 24px;
 }
-.section_title hr{
-  width: 7%; 
-  margin-inline: auto; 
-  border: 2px solid white
+.section_title hr {
+  width: 7%;
+  margin-inline: auto;
+  border: 2px solid white;
 }
-@media(max-width:900px){
-  .section_title hr{
+@media (max-width: 900px) {
+  .section_title hr {
     width: 25%;
   }
 }
@@ -53,9 +59,10 @@ body{
   width: 100%;
   height: 500px;
   background-color: var(--black);
+  border-radius: 0 0 50px 50px;
   overflow: hidden;
 }
-.carousel_container .carousel_slide{
+.carousel_container .carousel_slide {
   display: none;
 }
 .carousel_container .bg_img {
@@ -93,7 +100,7 @@ body{
   width: 400px;
   color: var(--white);
 }
-.carousel_container .texts_block h1{
+.carousel_container .texts_block h1 {
   color: var(--sec-color);
 }
 .carousel_container .texts_block button {
@@ -144,10 +151,10 @@ body{
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-.carousel_container .dots .dot:hover{
+.carousel_container .dots .dot:hover {
   background-color: #717171;
 }
-.active{
+.active {
   background-color: #717171 !important;
   height: 13px !important;
   width: 13px !important;
@@ -158,11 +165,15 @@ body{
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@media(max-width:900px){
+@media (max-width: 900px) {
   .carousel_container {
     height: 400px;
   }
@@ -179,41 +190,40 @@ body{
     width: 300px;
     color: var(--white);
   }
-  .carousel_container .texts_block p{
+  .carousel_container .texts_block p {
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box; 
-            -webkit-box-orient: vertical; 
-            -webkit-line-clamp:4; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
   }
-
 }
 
 /* End Carousel Design */
 
 /* Start Features Design */
-.features_container{
+.features_container {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.features_container .features_item{
+.features_container .features_item {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
-.features_container .features_item .big_circle{
+.features_container .features_item .big_circle {
   padding: 25px;
   border-radius: 50%;
   background-color: var(--prim-color);
 }
-.features_container .features_item h3{
+.features_container .features_item h3 {
   font-weight: 900;
 }
-@media (max-width:768px){
-  .features_container{
+@media (max-width: 768px) {
+  .features_container {
     flex-direction: column;
     gap: 25px;
   }
@@ -221,7 +231,7 @@ body{
 /* End Features Design */
 
 /* Start Team Design */
-.team_slider{
+.team_slider {
   position: relative;
   width: 100%;
   height: 700px;
@@ -238,7 +248,7 @@ body{
   color: var(--white);
   font-size: 28px;
 }
-.team_slider .arrows .prev{
+.team_slider .arrows .prev {
   padding: 5px 10px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
@@ -255,7 +265,7 @@ body{
   background-color: rgba(94, 94, 94, 0.342);
   cursor: pointer;
 }
-.team_container{
+.team_container {
   position: relative;
   background-color: var(--prim-color);
   background-image: url(../Images/web\ frame\ -\ 1280x720.png);
@@ -266,32 +276,32 @@ body{
   border-radius: 35px;
   overflow: hidden;
 }
-.team_container .team_info{
+.team_container .team_info {
   position: absolute;
   padding: 35px 25px;
   margin-top: 25px;
   width: 600px;
   z-index: 4;
-  background-color:#11151ca1;
+  background-color: #11151ca1;
   border-radius: 35px;
 }
-.team_container .team_info h2{
+.team_container .team_info h2 {
   font-size: 48px;
   color: var(--white);
   line-height: 50px;
   margin-top: 10px;
-  filter:drop-shadow(.5px .5px 5px var(--prime-color));
+  filter: drop-shadow(0.5px 0.5px 5px var(--prime-color));
 }
-.team_container .team_info h3{
+.team_container .team_info h3 {
   font-size: 24px;
   color: var(--sec-color);
   opacity: 0.7;
 }
-.team_container .team_info p{
+.team_container .team_info p {
   font-size: 18px;
   color: var(--white);
 }
-.team_container .team_info a{
+.team_container .team_info a {
   text-decoration: none;
   padding: 7px 25px;
   background-color: var(--sec-color);
@@ -303,10 +313,10 @@ body{
   margin: 15px 10px;
   font-weight: 600;
 }
-.team_container .team_info a:hover{
+.team_container .team_info a:hover {
   background-color: #c4b700;
 }
-.team_container .team_img{
+.team_container .team_img {
   position: relative;
   height: 700px;
 }
@@ -328,7 +338,7 @@ body{
   left: -127px;
   bottom: -136px;
 }
-.team_container .effects img{
+.team_container .effects img {
   position: absolute;
   top: 0;
   left: 0;
@@ -336,3 +346,58 @@ body{
   width: 1000px;
 }
 /* End Team Design */
+
+/* Start Project Design */
+
+/* End Project Design */
+
+/* Start Contact Design */
+.contact_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_container .contact_info,
+.contact_container .map {
+  width: 50%;
+  height: 400px;
+}
+.contact_container .contact_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 35px;
+  gap: 25px;
+}
+.contact_info .contact_item{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background-color: var(--white);
+  border-radius: 35px;
+  padding: 8px 25px;
+}
+.contact_item .icon{
+  background-color: var(--sec-color);
+  border-radius: 50%;
+  padding: 10px 18px;
+  font-size: 20px;
+}
+.contact_item .location{
+  background-color: var(--sec-color);
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+.contact_item .contact_details{
+  font-weight: 900;
+}
+.contact_container .map iframe{
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+}
+/* End Contact Design */
