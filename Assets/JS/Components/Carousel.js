@@ -1,5 +1,4 @@
 let SliderIndex = 1;
-let startX = null; // Variable to store the initial touch position
 
 ShowSliders(SliderIndex);
 
