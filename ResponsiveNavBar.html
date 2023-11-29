@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        #menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        #sidebar {
+            display: none;
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        #sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        #sidebar img {
+            width: 80%; /* Adjust the width as needed */
+            margin: 20px auto; /* Center the logo */
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: none;
+            }
+
+            #menu-icon {
+                display: block;
+            }
+
+            #sidebar {
+                display: block;
+                width: 0;
+                overflow: hidden;
+            }
+
+            #sidebar a {
+                display: block;
+                text-align: center;
+            }
+
+            #sidebar img {
+                width: 60%; /* Adjust the width as needed */
+                margin: 20px auto; /* Center the logo */
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body dir="rtl">
+
+<nav>
+    <span id="menu-icon">&#9776; Menu</span>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div id="sidebar">
+    <img src="./Assets/Images/7142320.png" alt="Logo">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<script>
+    var menuIcon = document.getElementById('menu-icon');
+    var sidebar = document.getElementById('sidebar');
+
+    menuIcon.addEventListener('click', function () {
+        if (sidebar.style.width === '250px') {
+            sidebar.style.width = '0';
+        } else {
+            sidebar.style.width = '250px';
+        }
+    });
+
+    document.addEventListener('click', function (event) {
+        var isClickInsideSidebar = sidebar.contains(event.target);
+        var isClickOnMenuIcon = (event.target === menuIcon);
+
+        if (!isClickInsideSidebar && !isClickOnMenuIcon) {
+            sidebar.style.width = '0';
+        }
+    });
+</script>
+
+</body>
+</html>
